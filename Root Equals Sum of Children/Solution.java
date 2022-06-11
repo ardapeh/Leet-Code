@@ -15,18 +15,14 @@
  */
 class Solution {
     public boolean checkTree(TreeNode root) {
-        if(root.left.val + root.right.val == root.val){
-            return true;
-        }else{
-            return false;
-        }
+        return root.left.val + root.right.val == root.val;
     }
 
     public static void main(String[] args) {
         TreeNode sol = new TreeNode(1);
         TreeNode sag = new TreeNode(3);
         TreeNode kok = new TreeNode(4,sol, sag);
-        TwoSum cozum = new TwoSum();
+        Solution cozum = new Solution();
         System.out.println(cozum.checkTree(kok));
 
     }
